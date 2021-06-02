@@ -1,0 +1,381 @@
+@import "reset";
+@import "global";
+* {
+  background-color: #282739;
+}
+
+button,
+button:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* Header */
+
+.header__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.header__menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 8vh;
+  font-family: "Lora", serif;
+}
+
+.header__logo {
+  letter-spacing: 3px;
+  cursor: pointer;
+}
+
+.header__logo a {
+  color: #b95ce4;
+  text-decoration: none;
+}
+
+.header__list li {
+  display: inline-block;
+  padding: 0px 20px;
+  position: relative;
+}
+
+.header__list li a {
+  transition: all 0.3s ease 0s;
+  color: orange;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.header__list li a:hover {
+  color: #b95ce4;
+}
+
+.header__panel li {
+  display: inline-block;
+  padding: 0px 5px;
+}
+
+/* Subcategory */
+
+.subcategory__list {
+  transition: all 0.3s ease 0s;
+  color: orange;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.subcategory__list:hover {
+  color: #b95ce4;
+}
+
+.subcategory__header {
+  transition: none;
+  color: orange;
+  text-decoration: none;
+  font-weight: bold;
+}
+/* Main */
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.main__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main__card {
+  position: relative;
+  min-width: 320px;
+  height: 440px;
+  box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2),
+    inset -5px -5px 15px rgba(255, 255, 255, 0.1),
+    5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  margin: 50px;
+  font-family: "Playfair Display", serif;
+}
+
+.main__card .main__box {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  background: #ebf5fc;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+  background: #0b0930;
+}
+
+.main__card:hover .main__box {
+  transform: translateY(-50px);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(45deg, #b95ce4, #4f29cd);
+}
+
+.main__card .main__box .main__content {
+  padding: 20px;
+  text-align: center;
+  background-color: transparent;
+}
+
+.main__card .main__box .main__content h2 {
+  position: absolute;
+  top: 10px;
+  right: 30px;
+  color: orange;
+  transition: 0.5s;
+  pointer-events: none;
+  background-color: transparent;
+}
+
+.main__card .main__box .main__content p {
+  font-style: 1em;
+  font-weight: 300;
+  color: rgb(192, 192, 192);
+  z-index: 1;
+  transition: 0.5s;
+  background-color: transparent;
+  padding: 15px;
+}
+
+.main__card:hover .main__box .main__content p {
+  color: #fff;
+  background-color: transparent;
+}
+
+.main__card .main__box .main__content a {
+  position: relative;
+  display: inline-block;
+  padding: 8px 20px;
+  background: #03a9f4;
+  margin-top: 15px;
+  border-radius: 20px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 400;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.main__card:hover .main__box .main__content a {
+  background: #ff568f;
+}
+
+/* Footer */
+
+.footer__container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer__row {
+  display: flex;
+  flex-wrap: wrap;
+  font-family: "Lora", serif;
+}
+
+.footer__content {
+  width: 25%;
+  padding: 15px 15px;
+}
+
+.footer__content h4 {
+  font-size: 20px;
+  color: #fff;
+  text-transform: capitalize;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.footer__content h4:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  background-color: #b95ce4;
+  height: 3px;
+  box-sizing: border-box;
+  width: 40px;
+}
+
+.footer__content ul li {
+  margin-bottom: 10px;
+  color: orange;
+}
+
+.footer__content a {
+  color: orange;
+  text-decoration: none;
+}
+
+.footer__content a:hover {
+  color: #b95ce4;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.footer__content ul li:hover {
+  color: #b95ce4;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.footer__social li {
+  display: inline-block;
+  padding: 0px 2px;
+}
+
+/* Owl carousel */
+
+#top-sale .owl-carousel .item .product a {
+  overflow: hidden;
+}
+#top-sale .owl-carousel .item .product img {
+  transition: transform 0.5s ease;
+}
+#top-sale .owl-carousel .item .product img:hover {
+  transform: scale(1.1);
+}
+#top-sale .owl-carousel .owl-nav button {
+  position: absolute;
+  top: 30%;
+  outline: none;
+}
+#top-sale .owl-carousel .owl-nav button.owl-prev {
+  left: 0;
+}
+#top-sale .owl-carousel .owl-nav button.owl-prev span,
+#top-sale .owl-carousel .owl-nav button.owl-next span {
+  font-size: 35px;
+  color: #003859;
+  padding: 0 1rem;
+}
+#top-sale .owl-carousel .owl-nav button.owl-prev span {
+  margin-left: -4rem;
+}
+#top-sale .owl-carousel .owl-nav button.owl-next {
+  right: 0;
+}
+#top-sale .owl-carousel .owl-nav button.owl-next span {
+  margin-right: -4rem;
+}
+
+/* Font Awesome */
+
+.fa-star,
+.fa-star-half {
+  color: yellowgreen;
+  padding: 3% 0;
+}
+
+.fa-shopping-basket:hover {
+  color: #b95ce4;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.fa-search:hover {
+  color: #b95ce4;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.fa-minus,
+.fa-plus {
+  background-color: transparent;
+}
+
+.fa-angle-up,
+.fa-angle-down {
+  background-color: transparent;
+}
+
+.shopping-cart,
+.fa-shopping-cart {
+  background-color: transparent;
+  color: white;
+  padding: 3% 0;
+}
+
+/* Fonts */
+
+h5,
+p,
+small,
+s,
+span,
+.col-md-6 h6, label {
+  color: #fff;
+}
+
+p,
+h5,
+.text-danger,
+.font {
+  font-family: "Lora", serif;
+}
+
+label{
+  font-family: "Playfair Display", serif;
+}
+
+/* Other */
+
+.img {
+  max-width: 100%;
+  height: auto;
+  background: lightblue;
+  background: radial-gradient(white 30%, lightblue 70%);
+}
+
+#cart_count {
+  text-align: center;
+  padding: 0 0.9rem 0.1rem 0.9rem;
+  border-radius: 3rem;
+}
+
+.cart-items + .cart-items {
+  padding: 2% 0;
+}
+
+.price-details h6 {
+  padding: 3% 2%;
+}
+
+.btn {
+  border-radius: 20px;
+  width: 200px;
+  font-family: "Playfair Display", serif;
+}
+
+.btn-success {
+  cursor: default;
+}
+
+@media (min-width: 1600px) {
+  .djj {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+}
+
+.modal-footer{
+  justify-content: center;
+}
+
+.modal, .modal-dialog{
+  background-color: transparent;
+}
